@@ -1,0 +1,43 @@
+{
+    "showssort": {
+        "system": "You are a book editor who need to reorder shuffled paragraphs to the original order in a chapter.",
+        "final_answer": "You are given 5 paragraphs in a chapter of a book in a shuffled order, each indicated by number identifier [] that represents the shuffled order, (e.g. [0], [2], etc.). Reorder the chapters according to the original order of chapters in the book. The chapters should be listed in descending order using identifiers, and the first chapters in original order should be list first, and the output format should be [] > [], e.g., [0] > [2]. Only response the reorder results, do not say any word or explain.\n\nChapters:\n{content}\n\nGive the original order of the paragraphs before being shuffled, only give the ordered identifiers [] > [] > [] > [] > []: "
+    },
+    "meetingqa": {
+        "system": "You are a helpful assistant.",
+        "final_answer": "You are given an article or a long dialogue, a multiple-choice question with four optional answer(marked by A, B, C, D). Please choose the best answer to the question based on the given content by responsing its corresponding letter (either A, B, C, or D). Do not provide any explanation.\n\nArticle: ```{content}```\n\nQuestion: {question}\nOptions: {options}\n\nAnswer(Only give the corresponding letter (either A, B, C, or D)): "
+    },
+    "paperqa": {
+        "system": "You are a helpful assistant.",
+        "final_answer": "You are given an article or a long dialogue, a multiple-choice question with four optional answer(marked by A, B, C, D). Please choose the best answer to the question based on the given content by responsing its corresponding letter (either A, B, C, or D). Do not provide any explanation.\n\nArticle: ```{content}```\n\nQuestion: {question}\nOptions: {options}\n\nAnswer(Only give the corresponding letter (either A, B, C, or D)): "
+    },
+    "reportsumsort": {
+        "system": "You are a helpful assistant.",
+        "final_answer": "Given a long text, and 5 events which take place in the long text, each indicated by number identifier [] that represents the shuffled order, (e.g. [0], [2], etc.). Reorder the events according to the original order of the events in the long text. The events should be listed in descending order using identifiers, and the first event in original order should be list first, and the output format should be [] > [], e.g., [0] > [2]. Only response the reorder results, do not say any word or explain.\n\nLong text:\n{content}\nEvents: {events}\n\nGive the reorder results, only give the ordered identifiers of the five events [] > [] > [] > [] > []: "
+    },
+    "meetingpred": {
+        "system": "You are a helpful assistant.",
+        "final_answer": "I want you to act as a long dialogue completer. Given a long dialogue, your objective is to add one speaker mentioned in the past dialogue at the end of the last sentence to complete the sentence and ensure its semantic integrity. At here, the added word must be a person's name which appears in the dialogue.\n\n{content}\n\nPredicted speaker of the last conversation (only the name of speaker): "
+    },
+    "showspred": {
+        "system": "You are a helpful assistant.",
+        "final_answer": "I want you to act as a long dialogue completer. Given a long dialogue, your objective is to add one speaker mentioned in the past dialogue at the end of the last sentence to complete the sentence and ensure its semantic integrity. At here, the added word must be a person's name which appears in the dialogue.\n\n{content}\n\nPredicted speaker of the last conversation (only the name of speaker): "
+    },
+    "senhallu": {
+        "system": "You are a helpful assistant.",
+        "final_answer": "You are given an NLP paper and a hypothesis. Your task is to identify if the hypothesis is right according to the paper. If the hypothesis is entailed by the paper, response \"Yes.\". If the hypothesis is contradict to the paper or has any hallucination, response \"No.\".\nPaper: ```{content}```\nHypothesis: ```{hypothesis}```\nAnswer (\"Yes.\" or \"No.\"):"
+    },
+    "abshallu": {
+        "system": "You are a helpful assistant.",
+        "final_answer": "You are given an NLP paper and a hypothesis. Your task is to identify if the hypothesis is right according to the paper. If the hypothesis is entailed by the paper, response \"Yes.\". If the hypothesis is contradict to the paper or has any hallucination, response \"No.\".\nPaper: ```{content}```\nHypothesis: ```{hypothesis}```\nAnswer (\"Yes.\" or \"No.\"):"
+    },
+    "private_eval": {
+        "system": "You are a helpful assistant.",
+        "final_answer": "# The following are multiple api documents from three packages between [begin] and [end], and code to be completed. Please complete the code with above apis. Only give the completed code, and don't give any explaination and annotations. Only give one line complete code as short as possible.\n\n{content}"
+    },
+    "altqa": {
+        "system": "You are a helpful assistant.",
+        "final_answer": "{content}\n\nYou should only give an number as the answer, without any explanations and other words.\nAnswer: "
+    }
+
+}
