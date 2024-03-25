@@ -38,12 +38,24 @@ If you obtain outputs of each datasets, you can create a python environment ``BA
     ```bash
     pip install -r requirements.txt
     ```
+3. Run the generation script with your model. For example:
 
-3. Run the evaluation script with your model's output. For example:
+    ```bash
+    python code/run_for_all.py --output_path output_path --input_path input_path --prompt_name prompt_name --prompt_path prompt_path --model_path model_path
+    ```
+
+4. Run the evaluation script with your model's output. For example:
     
     ```bash
     python evaluate.py --input_path your_file.jsonl --task task
     ```
+### Evaluating a model from huggingface
+
+Here, we provide instructions on utilizing a model from Hugging Face to generate responses to prompts in BAMBOO. We employ the model ``lmsys/vicuna-7b-v1.5-16k``, along with its template in ``fastchat``, as an illustrative example. You can execute the following script to evaluate ``altqa_4K`` with the aforementioned model:
+
+```bash
+python run_for_all.py --output_path pred_altqa_long_longchat.jsonl --input_path datasets/altqa_middle.jsonl --prompt_name altqa --prompt_path prompt.json --model_path lmsys/vicuna-7b-v1.5-16k
+```
 
 ### Output format
 
